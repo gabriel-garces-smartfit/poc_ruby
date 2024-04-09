@@ -1,5 +1,7 @@
 Dado('que preenche o cpf') do
     @app = Screens::App.new
+    
+    @app.country.select_country
     @app.login.fill_cpf('appsmartfit')  
 end
   

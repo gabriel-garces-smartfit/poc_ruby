@@ -14,22 +14,22 @@ module Screens
         end
         
         def click_id(id)
-            @driver.manage.timeouts.implicit_wait = 15
+            @driver.manage.timeouts.implicit_wait = 30
             @driver.find_element(:accessibility_id, id).click()
         end
         
         def click_xpath(xpath)
-            @driver.manage.timeouts.implicit_wait = 15
+            @driver.manage.timeouts.implicit_wait = 30
             @driver.find_element(:xpath, xpath).click()
         end
         
         def send_keys_id(id, field)
-            @driver.manage.timeouts.implicit_wait = 15
+            @driver.manage.timeouts.implicit_wait = 30
             @driver.find_element(:accessibility_id, id).send_keys(field)
         end
         
         def send_keys_xpath(xpath, field)
-            @driver.manage.timeouts.implicit_wait = 15
+            @driver.manage.timeouts.implicit_wait = 30
             @driver.find_element(:xpath, xpath).send_keys(field)
         end
     end

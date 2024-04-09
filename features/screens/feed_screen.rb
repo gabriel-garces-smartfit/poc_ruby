@@ -4,7 +4,7 @@ module Screens
         def elements_feed
             {
                 ## Header Feed
-                xpath_home: '//android.view.View[@content-desc="Aluno(a)"]'
+                xpath_home: '//android.view.View[@content-desc="Incrível! continue assim :D"]'
             }
         end
 

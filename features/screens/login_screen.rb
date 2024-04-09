@@ -3,8 +3,6 @@ module Screens
 
         def elements_login
             {
-                ## Button Country
-                id_btn_country: 'Brasil',
                 ## Access Smart Fit
                 id_btn_access_smart_fit: 'ACESSO SMART FIT',
                 xpath_click_document: '//android.widget.EditText',
@@ -16,7 +14,6 @@ module Screens
         end
 
         def fill_cpf(usuario)
-            click_id elements_login[:id_btn_country]
             click_id elements_login[:id_btn_access_smart_fit]
             click_xpath elements_login[:xpath_click_document]
             send_keys_xpath elements_login[:xpath_set_document], usuario
