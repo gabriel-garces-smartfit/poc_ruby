@@ -8,7 +8,7 @@ module Screens
                 xpath_click_CEP_suzano: '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]',
                 xpath_bnt_black_plan: '//android.widget.Button[@content-desc="COMPRAR PLANOS"][1]',
                 xpath_btn_wanted_plan: '(//android.widget.Button[@content-desc="QUERO ESTE PLANO"])[1]',
-                xpath_btn_continue_shopping: 'CONTINUAR COMPRA',
+                id_btn_continue_shopping: 'CONTINUAR COMPRA',
                 id_person_data: 'DADOS PESSOAIS'
             }
         end
@@ -31,15 +31,13 @@ module Screens
         def buy_black_plan
             click_xpath elements_checkout[:xpath_bnt_black_plan]
             click_xpath elements_checkout[:xpath_btn_wanted_plan]
-            click_id elements_checkout[:xpath_btn_continue_shopping]
+            click_id elements_checkout[:id_btn_continue_shopping]
+            click_id elements_checkout[:id_btn_continue_shopping]
         end
 
         def person_information
             sleep (5)
             wait_for_id elements_checkout[:id_person_data]
-            sleep(5)
         end
-        
-
     end
 end
